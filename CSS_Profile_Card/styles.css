@@ -172,15 +172,17 @@ main {
 }
 
 /* SECTION 5: Reflection Questions
-1. The second .intro rule wins because both selectors have the same
-   specificity and importance. CSS applies the later declaration
-   when selectors are otherwise tied.
 
-2. With content-box, the rendered width would be 549px:
-   500px declared content width + 20px left padding + 20px right padding
-   + 7px left border + 2px right border = 549px.
-   With border-box, the total width stays 500px.
+1. The second .intro rule wins because both rules have the same
+   selector specificity. When two CSS declarations have equal
+   specificity and importance, the one written later takes priority.
 
-3. I would choose visibility: hidden when I want an element to disappear
-   visually without changing the surrounding layout. For example, I
-   could hide a temporary status label while keeping its space reserved. */
+2. If box-sizing were content-box, the total rendered width of
+   the card would be 549px. I calculated this by adding the
+   content width (500px), left and right padding (40px), and
+   borders (7px + 2px), giving 500 + 40 + 9 = 549px.
+
+3. I would use visibility: hidden when I want to hide an element
+   without affecting the layout of the page. For example, I
+   could hide a status message while keeping its space reserved.
+*/
